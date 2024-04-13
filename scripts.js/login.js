@@ -28,7 +28,7 @@ function moveToLogin(){
 
 function signUp(fullName, creatEmail, creatPassword) {
 
-    const existingUser = users.find(user => user.email === creatEmail || user.fullName === fullName);
+    const existingUser = users.find(user => user.creatEmail === creatEmail || user.fullName === fullName);
 
     /*if (creatPassword.value !== repeatPassword.value) {
         console.log(creatPassword.value);
@@ -47,8 +47,10 @@ function signUp(fullName, creatEmail, creatPassword) {
         
         localStorage.setItem("users", JSON.stringify(users));
 
-        //moveToLogin();
+        
         alert("User added successfully.");
+        moveToLogin();
+        
     }
 }
 
@@ -59,24 +61,11 @@ function addUser(email, password) {
         alert(`Welcome ${users[existingUserIndex].fullName}`);
         localStorage.setItem("currentUser", JSON.stringify(existingUserIndex));
         window.location.href = "Student_session.html";
-        console.log(password);
         alert(`Welcome ${users[existingUserIndex].fullName}`);
     }
     else {
         alert("try creat an account");
     }
-/*
-    // If the email doesn't exist, add the new user
-    users.push({
-        email,
-        password,
-    });
-
-    localStorage.setItem("users", JSON.stringify(users));
-
-    console.log("User added successfully.");
-    return users.length - 1; // Return the index of the newly added user
-    */
 }
 
 creat.addEventListener('click', function(event) {
@@ -86,12 +75,7 @@ creat.addEventListener('click', function(event) {
 
 login.addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default form submission behavior
-    let index = addUser(email.value, password.value);
-    
-    //window.location.href = "Student_session.html";
-    /*alert("Login successful");
-    alert(index);*/
-    
+    addUser(email.value, password.value);
 });
 
 creatAccount.addEventListener("click", moveToSignUp);

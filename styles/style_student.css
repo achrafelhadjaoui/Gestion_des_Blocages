@@ -6,10 +6,6 @@
     
 }
 
-
-
-
-
 body {
     height: 100vh;
     background-image: url(../images/Background.jfif);
@@ -136,4 +132,69 @@ td {
 
 .btn_logout {
     height: 30px;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: #999;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 100;
+}
+
+#popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #11468F;
+    width: 300px;
+    height: 280px;
+    margin-left: -100px; /*Half the value of width to center div*/
+    margin-top: -250px; /*Half the value of height to center div*/
+    border-radius: 15px;
+    border: none;
+    overflow: hidden;
+    z-index: 200;
+}
+
+.popupcontrols {
+    width: 40px;
+    height: 100%;
+
+}
+
+.controls {
+    height: 40px;
+    background: rgb(84, 84, 82);
+}
+
+#popupclose {
+    width: 100%;
+    height: 100%;
+    background: red;
+    float: right;
+    padding: 12px;
+    cursor: pointer;
+}
+.popupcontent{
+    height: 100%;
+    width: calc(100% - 40px);
+}
+
+.popupcontent {
+    padding-top: 5px;
+    text-align: center;
+}
+
+#popup > p {
+    height: calc(100% - 40px);
+    align-content: center;
+    padding: 0 20px;
+}
+
+.display {
+    display: none;
 }
