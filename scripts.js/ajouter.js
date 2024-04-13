@@ -5,8 +5,8 @@ const brief = document.querySelector("#brief");
 const difficulte = document.querySelector("#difficulte");
 const submit = document.querySelector("#submit");
 
-let ajouter = JSON.parse(localStorage.getItem("ajouter")) || {};
-let currentUser = JSON.parse(localStorage.getItem("currentUser")) || [];
+let ajouter = JSON.parse(localStorage.getItem("ajouter")) || [];
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 
 
@@ -32,6 +32,7 @@ function ajouteBlocage(selectFormateur, selectBootcamp, titre, brief, difficulte
 submit.addEventListener('click', function(event) {
     event.preventDefault();
     ajouteBlocage(selectFormateur.value, selectBootcamp.value, titre.value, brief.value, difficulte.value);
+    window.location.href = "Student_session.html";
 });
 
 
