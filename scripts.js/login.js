@@ -1,7 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-const loginForm = document.querySelector("#Login");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const login = document.querySelector("#submit_login");
@@ -14,7 +13,17 @@ const backToLogin = document.querySelector("#backToLogin");
 const creat = document.querySelector("#submitCreat");
 
 let users = JSON.parse(localStorage.getItem("users")) || [];
-//localStorage.removeItem("users");
+
+//admin
+if (!users) {
+    users.push({
+        fullName: "Abed Elaziz",
+        creatEmail: "AbdElaziz@admin.com",
+        creatPassword: "admin"
+    });
+
+    localStorage.setItem("users", JSON.stringify(users));
+}
 
 function moveToSignUp() {
     document.querySelector("#login").style.display = "none";
@@ -36,7 +45,7 @@ function signUp(fullName, creatEmail, creatPassword) {
         alert("wrong password!!!!");
     }*/
     if (existingUser) {
-        alert(`${existingUser.value} already exist`);
+        alert("already exist");
     }
     else {
         users.push({
@@ -59,9 +68,15 @@ function addUser(email, password) {
     const existingUserIndex = users.findIndex (user => user.creatEmail === email && user.creatPassword === password);
     if (existingUserIndex !== -1) {
         alert(`Welcome ${users[existingUserIndex].fullName}`);
-        localStorage.setItem("currentUser", JSON.stringify(existingUserIndex));
-        window.location.href = "Student_session.html";
-        alert(`Welcome ${users[existingUserIndex].fullName}`);
+
+        //check if admin
+        if (users[existingUserIndex].creatEmail === "AbdElaziz@admin.com" && users[existingUserIndex].creatPassword === "admin") {
+            window.location.href = "admin.html";
+        }
+        else {
+            localStorage.setItem("currentUser", JSON.stringify(existingUserIndex));
+            window.location.href = "Student_session.html";
+        } 
     }
     else {
         alert("try creat an account");

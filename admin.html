@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style_student.css">
+    <title>Gestion Des Blocages</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="#" alt="">
+        </div>
+    </header>
+    <main class="row">
+        <section id="session_user" class="column user_data">
+            <div class="user_info column">
+                <div class="info user_info column">
+                    <div id="avatar">
+                        <img src="images/profile.png" alt="">
+                    </div>
+                    <h2 id="studentName">Achraf Elhadjaoui</h2>
+                    <p id="gmail">achrafelhadjaoui@gmail.com</p>
+                    <p>Formateur</p>
+                </div>
+                <button class="Logout row" id="logOut">
+                    <div class="btn_logout">
+                        <img src="images/logout (1).png" alt="#" class="icon">
+                    </div>
+                    Logout
+                </button>
+            </div>
+        </section>
+        <section id="data" class="user_data" >
+            <button id="ajouter">Ajouter</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date De Creation</th>
+                        <th>Difficulte</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                    <tr>
+                        <td>Abed Elaziz</td>
+                        <td>25/5/2035</td>
+                        <td>
+                            <div>
+                                <img src="images/view.png" alt="" class="eyes">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="action row">
+                                <div class="icon_style" ><img class="icon icon_pad" src="images/non_valide.png" alt=""></div>
+                                <div class="icon_style" ><img class="icon icon_pad" src="images/edit.png" alt=""></div>                            </div>
+                        </td>
+                    </tr>
+                <tbody id="tab">
+                </tbody>
+            </table>
+            <div id="overlay" class="display"></div>
+            <div id="popup" class="display">
+                <div class="controls row">
+                    <div class="popupcontrols">
+                        <span id="popupclose">X</span>
+                    </div>
+                    <div class="popupcontent">
+                        <h1>Difficulte</h1>
+                    </div>
+                </div>
+                <p id="showDifficulte">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut repudiandae quaerat alias, quidem vitae voluptatibus at nihil excepturi laudantium eaque dolor nisi veniam aperiam earum libero magni facere atque doloribus.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright @ 2010-2024</p>
+    </footer>
+</body>
+</html>
