@@ -39,7 +39,7 @@ function show() {
             </td>
             <td>
                 <div class="action row">
-                    <div class="icon_style" onclick = "edit(${i})"><img class="icon icon_pad" src="images/non_valide.png" alt=""></div>
+                    <div class="icon_style"><img class="icon icon_pad" src="images/non_valide.png" alt=""></div>
                     <div class="icon_style" onclick = "modif(${i})"><img class="icon icon_pad" src="images/edit.png" alt=""></div>
                     <div class="icon_style" id="suprem" onclick = "del(${i})"><img class="icon icon_pad" src="images/delete.png" alt=""></div>
                 </div>
