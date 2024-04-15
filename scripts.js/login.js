@@ -15,13 +15,12 @@ const creat = document.querySelector("#submitCreat");
 let users = JSON.parse(localStorage.getItem("users")) || [];
 
 //admin
-if (!users) {
+if (!users[0]) {
     users.push({
         fullName: "Abed Elaziz",
         creatEmail: "AbdElaziz@admin.com",
         creatPassword: "admin"
     });
-
     localStorage.setItem("users", JSON.stringify(users));
 }
 

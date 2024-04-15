@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/ajouter.css">
     <title>Gestion Des Blocages</title>
 </head>
 <body>
-    <header>
-        <div>
-            <img src="#" alt="">
+    <section id="popup" class="display">
+        <div class="controls row">
+            <div class="popupcontrols">
+                <span id="popupclose">X</span>
+            </div>
+            <div class="popupcontent">
+                <h2>Modifier</h2>
+            </div>
         </div>
-    </header>
-    <section id="modifier">
-        <h2>Modifier</h2>
-        <form id="modifier_info" class="myForm">
-            <label>Titre</label>
-                <input type="text" id="titre" class="modiffier" required>
-            <label>Brief</label>
-                <input type="text" id="brief" class="modiffier" required>
-            <label>Difficulte</label>
-                <input type="text" id="difficulte" class="modiffier Difficulte" required>
-            <button id="submit">Submit</button> 
-          </form>
+        <form id="myForm">
+            <input type="text" id="titre" class="input" placeholder="titre" required>
+            <input type="text" id="brief" class="input" placeholder="brief" required>
+            <textarea id="difficulte" name="difficulte" rows="5" cols="33" placeholder="Put your difficulte" required></textarea>
+            <button id="submit" class="input">Submit</button>  
+        </form>
     </section>
-    <footer>
-        <p>Cporywright @ 2010-2023</p>
-    </footer>
+
 
     <script src="scripts.js/modifier.js"></script>
 </body>

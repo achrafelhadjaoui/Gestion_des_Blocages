@@ -28,10 +28,11 @@ function show() {
     for(let i = 1; i < ajouter.length; i++) {
         for (let j = 0; j < ajouter[i].length; j++) {
             if (ajouter[i][j].selectFormateur === "Abed Elaziz") {
+                let checkBoxSrc = ajouter[i][j].valide ? "images/validate.png" : "images/non_valide.png";
                 tab += `
                 <tr>
                             <td>${users[i].fullName}</td>
-                            <td>25/5/2035</td>
+                            <td>${ajouter[i][j].date}</td>
                             <td>
                                 <div onclick = "display(${i}, ${j})">
                                     <img src="images/view.png" alt="" class="eyes">
@@ -40,9 +41,9 @@ function show() {
                             <td>
                                 <div class="action row">
                                     <div class="icon_style" onclick = "valide(${i}, ${j})">
-                                        <img class="icon icon_pad" id="nonValide" src="images/non_valide.png" alt="">
+                                        <img class="icon icon_pad" id="nonValide" src="${checkBoxSrc}" alt="">
                                     </div>
-                                    <div class="icon_style" ><img class="icon icon_pad" src="images/edit.png" alt=""></div>                            
+                                    <div class="icon_style" onclick = "note(${i}, ${j})"><img class="icon icon_pad" src="images/edit.png" alt=""></div>                            
                                     </div>
                             </td>
                     </tr>
@@ -65,35 +66,17 @@ function valide(i, j) {
             this.src = "images/validate.png"
         });
     });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-//delete
-function del(index) {
-    ajouter[currentUser].splice(index, 1) ;
+    ajouter[i][j].valide = "true";
     localStorage.setItem("ajouter", JSON.stringify(ajouter));
-    show();
+
 }
 
-//modifier
-function modif(index) {
-    localStorage.setItem("index", JSON.stringify(index));
-    window.location.href = "Modifier.html";
+// notes
+
+function note(i, j) {
+    localStorage.setItem("row", JSON.stringify(i));
+    localStorage.setItem("colum", JSON.stringify(j));
+    window.location.href = "modal.html";
 }
 
 //display difficulte

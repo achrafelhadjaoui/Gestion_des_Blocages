@@ -28,10 +28,13 @@ function show() {
     let tab = '';
 
     for (let i = 0; i < (ajou[currentUser] || []).length; i++) {
+
+        let checkBoxSrc = ajou[currentUser][i].valide ? "images/validate.png" : "images/non_valide.png";
+        let checkModifier = ajou[currentUser][i].valide ? "none" : "";
         tab += `
         <tr>
             <td>${users[currentUser].fullName}</td>
-            <td>25/5/2035</td>
+            <td>${ajou[currentUser][i].date}</td>
             <td>
                 <div onclick = "display(${i})">
                     <img src="images/view.png" alt="" class="eyes">
@@ -39,17 +42,18 @@ function show() {
             </td>
             <td>
                 <div class="action row">
-                    <div class="icon_style"><img class="icon icon_pad" src="images/non_valide.png" alt=""></div>
-                    <div class="icon_style" onclick = "modif(${i})"><img class="icon icon_pad" src="images/edit.png" alt=""></div>
+                    <div class="icon_style"><img class="icon icon_pad checkBox" src="${checkBoxSrc}" alt=""></div>
+                    <div class="icon_style" id="checkModifier" style="display: ${checkModifier}" onclick = "modif(${i})"><img class="icon icon_pad" src="images/edit.png" alt=""></div>
                     <div class="icon_style" id="suprem" onclick = "del(${i})"><img class="icon icon_pad" src="images/delete.png" alt=""></div>
                 </div>
             </td>
         </tr>
         `;
     }
-
     document.querySelector("#tab").innerHTML = tab;
+    localStorage.setItem("ajouter", JSON.stringify(ajou));
 }
+    
 
 //delete
 function del(index) {

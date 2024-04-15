@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/modal.css">
     <title>Gestion Des Blocages</title>
 </head>
 <body>
-    <header>
-        <div>
-            <img src="#" alt="">
+
+    <section id="popup" class="display">
+        <div class="controls row">
+            <div class="popupcontrols">
+                <span id="popupclose">X</span>
+            </div>
+            <div class="popupcontent">
+                <h2>Notes</h2>
+            </div>
         </div>
-    </header>
-    <section id="modal">
-        <h2>Modal</h2>
-        <form id="modifier_info" class="myForm">
-            <label>Titre</label>
-                <input type="text" class="modiffier" required>
-            <label>Brief</label>
-                <input type="text" class="modiffier" required>
-            <label>Difficulte</label>
-                <input type="text" class="modiffier Difficulte" required>
-            <button>Submit</button> 
-          
-        </form>
+        <form>
+            <div class="label">
+                <input type="radio" id="directed" name="notesType">
+                <label for="directed" class="input">Directed to someone</label>
+            </div>
+            <textarea id="notedirected" class="appear" placeholder="Write your notes here"></textarea>
+            <div class="label">
+                <input type="radio" id="peer" name="notesType">
+                <label for="peer" class="input">helped by peer</label>
+            </div>
+            <textarea id="notePeer" class="appear" placeholder="Write your notes here"></textarea>
+            <div class="label">
+                <input type="radio" id="formateur" name="notesType">
+                <label for="formateur" class="input">helped by formateur</label>
+            </div>
+            <textarea id="noteFormateur" class="appear" placeholder="Write your notes here"></textarea>
+            
+            <button id="submit" class="input">Submit</button>
+        </form>        
     </section>
-    <footer>
-        <p>Cporywright @ 2010-2023</p>
-    </footer>
+    <script src="scripts.js/modal.js"></script>
 </body>
 </html>
