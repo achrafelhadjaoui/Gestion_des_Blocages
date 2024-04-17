@@ -1,0 +1,12 @@
+@media (max-width: 490px) {
+    #popup {
+        width : 380px;
+        height : 400px;
+        left: 40%;
+    }
+
+    .input {
+        margin: 2px;
+        width: 100%;
+    }
+}

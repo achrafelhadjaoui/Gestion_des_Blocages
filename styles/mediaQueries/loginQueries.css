@@ -1,0 +1,91 @@
+@media (max-width: 745px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-image: url(../../images/night\ studying\ aesthetic.jfif);
+    }
+
+    #welcome {
+        height: 40%;
+        padding: 0 15px;
+        background-image: none;
+    }
+
+    #login, #Sign_up {
+        height: 60%;
+    }
+
+    #welcome > div > p {
+        display: none;   
+    }
+
+    body > section {
+        width: 100%;
+    }
+
+    .data {
+        background: #11468F;
+        padding: 20px;
+        height: 80%;
+        border-radius: 10px;
+        gap: 20px;
+    }
+
+    input {
+        /*margin-top: 30px;*/
+        background: #fff;
+        color: black;
+    }
+
+    .title {
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    form {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .submit {
+        background: gray;
+    }
+
+    .typo {
+        color: rgb(215, 200, 200);
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+}
+
+@media (max-width: 473px) {
+    #login, #Sign_up {
+        height: 60%;
+    }
+
+    .info {
+        height: 80%;
+    }
+}
+
+@media (max-width: 419px) {
+    #login, #Sign_up {
+        height: 40%;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .data {
+        height: 400px;
+        gap: 40px;
+    }
+}

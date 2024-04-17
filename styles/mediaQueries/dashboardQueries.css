@@ -1,0 +1,49 @@
+@media (max-width: 695px){
+    main {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #session_user {
+        height: 300px;
+        width: 100%
+    }
+
+    .user_info {
+        padding: 10px;
+    }
+    
+    #data {
+        width: 100%;
+    }
+
+    .icon {
+        height: 100%;
+    }
+
+    #avatar {
+        width: 10%;
+    }
+    #logOut 
+    {
+        width: 70px;
+    }
+}
+
+@media (max_width: 465px)
+{
+    .action {
+        height: 100%;
+        padding: 0;
+    }
+
+    .icon_style {
+        height: 100%;
+    }
+
+    .icon {
+        width: 100px
+    }
+
+}
+

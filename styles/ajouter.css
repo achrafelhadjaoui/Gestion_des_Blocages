@@ -27,7 +27,7 @@ body {
     background: #11468F;
     width: 450px;
     height: 450px;
-    margin-left: -100px; /*Half the value of width to center div*/
+    margin-left: -150px; /*Half the value of width to center div*/
     margin-top: -250px; /*Half the value of height to center div*/
     border-radius: 15px;
     border: none;
