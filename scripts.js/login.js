@@ -1,5 +1,4 @@
 
-document.addEventListener("DOMContentLoaded", function() {
 
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
@@ -94,5 +93,3 @@ login.addEventListener('click', function(event) {
 
 creatAccount.addEventListener("click", moveToSignUp);
 backToLogin.addEventListener("click", moveToLogin);
-
-});

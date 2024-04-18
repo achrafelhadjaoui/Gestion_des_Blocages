@@ -44,7 +44,7 @@ function show() {
                 <div class="action row">
                     <div class="icon_style"><img class="icon icon_pad checkBox" src="${checkBoxSrc}" alt=""></div>
                     <div class="icon_style" id="checkModifier" style="display: ${checkModifier}" onclick = "modif(${i})"><img class="icon icon_pad" src="images/edit.png" alt=""></div>
-                    <div class="icon_style" id="suprem" onclick = "del(${i})"><img class="icon icon_pad" src="images/delete.png" alt=""></div>
+                    <div class="icon_style" id="suprem" style="display: ${checkModifier}" onclick = "del(${i})"><img class="icon icon_pad" src="images/delete.png" alt=""></div>
                 </div>
             </td>
         </tr>

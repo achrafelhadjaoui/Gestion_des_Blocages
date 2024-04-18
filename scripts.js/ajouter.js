@@ -19,9 +19,7 @@ function ajouteBlocage(selectFormateur, selectBootcamp, titre, brief, date, diff
         ajouter[currentUser] = [];
     }
 
-    let isInputsFilled = ajouter[currentUser].every(element => element.value);
-
-    if (!isInputsFilled) {
+    if (!selectFormateur || !selectBootcamp || !titre || !brief || !date, !difficulte) {
         alert("enter all the inputs");
     } else {
         ajouter[currentUser].push({
