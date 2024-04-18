@@ -19,17 +19,22 @@ function ajouteBlocage(selectFormateur, selectBootcamp, titre, brief, date, diff
         ajouter[currentUser] = [];
     }
 
-    ajouter[currentUser].push({
-        selectFormateur,
-        selectBootcamp,
-        titre,
-        brief,
-        date,
-        difficulte,
-    });
+    let isInputsFilled = ajouter[currentUser].every(element => element.value);
 
-    localStorage.setItem("ajouter", JSON.stringify(ajouter));
-
+    if (!isInputsFilled) {
+        alert("enter all the inputs");
+    } else {
+        ajouter[currentUser].push({
+            selectFormateur,
+            selectBootcamp,
+            titre,
+            brief,
+            date,
+            difficulte,
+        });
+    
+        localStorage.setItem("ajouter", JSON.stringify(ajouter));
+    }
 }
 
 submit.addEventListener('click', function(event) {
